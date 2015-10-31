@@ -7,23 +7,23 @@ const ThemeManager = require('material-ui/lib/styles/theme-manager');
 const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
 const Colors = require('material-ui/lib/styles/colors');
 
-const Main = React.createClass({
+class Main extends Component{
+  
+  static get childContextTypes() {
+    return { muiTheme: React.PropTypes.object };
+  }
+  
+  constructor() {
+	super();
+	this.state = { muiTheme: ThemeManager.getMuiTheme(LightRawTheme)};
+  }
 
-  childContextTypes: {
-    muiTheme: React.PropTypes.object,
-  },
-
-  getInitialState () {
-    return {
-      muiTheme: ThemeManager.getMuiTheme(LightRawTheme),
-    };
-  },
 
   getChildContext() {
     return {
       muiTheme: this.state.muiTheme,
     };
-  },
+  }
 
   componentWillMount() {
     let newMuiTheme = ThemeManager.modifyRawThemePalette(this.state.muiTheme, {
@@ -31,7 +31,7 @@ const Main = React.createClass({
     });
     
     this.setState({muiTheme: newMuiTheme});
-  },
+  }
 
   render() {
 
@@ -56,16 +56,17 @@ const Main = React.createClass({
         <h1>material-ui</h1>
         <h2>example project</h2>
 
-        <RaisedButton label="Super Secret Password1" primary={true} onTouchTap={this._handleTouchTap} />
+        <RaisedButton label="Super Secret Password4" primary={true} onTouchTap={this._handleTouchTap} />
 
       </div>
     );
-  },
+  }
 
   _handleTouchTap() {
     this.refs.superSecretPasswordDialog.show();
-  },
+  }
 
-});
+}
 
-module.exports = Main;
+export default Main;
+
