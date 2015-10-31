@@ -1,11 +1,11 @@
 /** In this file, we create a React component which incorporates components provided by material-ui */
 
 import React, { PropTypes, Component } from 'react';
-const RaisedButton = require('material-ui/lib/raised-button');
-const Dialog = require('material-ui/lib/dialog');
-const ThemeManager = require('material-ui/lib/styles/theme-manager');
-const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
-const Colors = require('material-ui/lib/styles/colors');
+import RaisedButton from 'material-ui/lib/raised-button';
+import Dialog from 'material-ui/lib/dialog';
+import ThemeManager from 'material-ui/lib/styles/theme-manager';
+import LightRawTheme from 'material-ui/lib/styles/raw-themes/light-raw-theme';
+import Colors from 'material-ui/lib/styles/colors';
 
 class Main extends Component{
   
@@ -56,7 +56,7 @@ class Main extends Component{
         <h1>material-ui</h1>
         <h2>example project</h2>
 
-        <RaisedButton label="Super Secret Password4" primary={true} onTouchTap={this._handleTouchTap} />
+        <RaisedButton label="Super Secret Password5" primary={true} onTouchTap={this._handleTouchTap} />
 
       </div>
     );
