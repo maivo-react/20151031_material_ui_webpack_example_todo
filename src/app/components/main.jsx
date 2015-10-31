@@ -57,7 +57,7 @@ class Main extends Component{
         <h1>material-ui</h1>
         <h2>example project</h2>
 
-        <RaisedButton label="Super Secret Password6" primary={true} onTouchTap={this._handleTouchTap} />
+        <RaisedButton label="Super Secret Password7" primary={true} onTouchTap={this._handleTouchTap} />
 
       </div>
     );
