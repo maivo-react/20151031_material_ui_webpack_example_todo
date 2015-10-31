@@ -1,8 +1,10 @@
 
-  let React = require('react');
-  let ReactDOM = require('react-dom');
-  let injectTapEventPlugin = require('react-tap-event-plugin');
-  let Main = require('./components/main.jsx'); // Our custom react component
+import React from "react";
+import ReactDOM from "react-dom";
+import injectTapEventPlugin from "react-tap-event-plugin";
+
+ 
+  import Main from './components/main.jsx'; // Our custom react component
 
   //Needed for React Developer Tools
   window.React = React;
