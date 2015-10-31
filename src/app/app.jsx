@@ -2,9 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import injectTapEventPlugin from "react-tap-event-plugin";
-
- 
-  import Main from './components/main.jsx'; // Our custom react component
+import Main from './components/main.jsx'; // Our custom react component
 
   //Needed for React Developer Tools
   window.React = React;
