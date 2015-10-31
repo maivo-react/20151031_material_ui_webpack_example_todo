@@ -3,9 +3,9 @@ import classnames from 'classnames';
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../constants/TodoFilters';
 
 const FILTER_TITLES = {
-  [SHOW_ALL]: 'All',
-  [SHOW_ACTIVE]: 'Active',
-  [SHOW_COMPLETED]: 'Completed'
+	[SHOW_ALL] : 'All',
+	[SHOW_ACTIVE] : 'Active',
+	[SHOW_COMPLETED] : 'Completed',
 };
 
 class Footer extends Component {
@@ -63,11 +63,11 @@ class Footer extends Component {
 }
 
 Footer.propTypes = {
-  completedCount: PropTypes.number.isRequired,
-  activeCount: PropTypes.number.isRequired,
-  filter: PropTypes.string.isRequired,
-  onClearCompleted: PropTypes.func.isRequired,
-  onShow: PropTypes.func.isRequired
+	completedCount : PropTypes.number.isRequired,
+	activeCount : PropTypes.number.isRequired,
+	filter : PropTypes.string.isRequired,
+	onClearCompleted : PropTypes.func.isRequired,
+	onShow : PropTypes.func.isRequired,
 };
 
 export default Footer;

@@ -6,7 +6,7 @@ import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../constants/TodoFilters'
 const TODO_FILTERS = {
   [SHOW_ALL]: () => true,
   [SHOW_ACTIVE]: todo => !todo.completed,
-  [SHOW_COMPLETED]: todo => todo.completed
+  [SHOW_COMPLETED]: todo => todo.completed,
 };
 
 class MainSection extends Component {
@@ -80,7 +80,7 @@ class MainSection extends Component {
 
 MainSection.propTypes = {
   todos: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
+  actions: PropTypes.object.isRequired,
 };
 
 export default MainSection;

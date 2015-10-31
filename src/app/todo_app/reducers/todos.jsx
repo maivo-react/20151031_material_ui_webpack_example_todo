@@ -3,7 +3,7 @@ import { ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_CO
 const initialState = [{
   text: 'Use Redux',
   completed: false,
-  id: 0
+  id: 0,
 }];
 
 export default function todos(state = initialState, action) {
@@ -12,7 +12,7 @@ export default function todos(state = initialState, action) {
     return [{
       id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
       completed: false,
-      text: action.text
+      text: action.text,
     }, ...state];
 
   case DELETE_TODO:
@@ -37,7 +37,7 @@ export default function todos(state = initialState, action) {
   case COMPLETE_ALL:
     const areAllMarked = state.every(todo => todo.completed);
     return state.map(todo => Object.assign({}, todo, {
-      completed: !areAllMarked
+      completed: !areAllMarked,
     }));
 
   case CLEAR_COMPLETED:

@@ -5,9 +5,7 @@ import TodoTextInput from './TodoTextInput';
 class TodoItem extends Component {
   constructor(props, context) {
     super(props, context);
-    this.state = {
-      editing: false
-    };
+    this.state = {editing: false};
   }
 
   handleDoubleClick() {
@@ -52,7 +50,7 @@ class TodoItem extends Component {
     return (
       <li className={classnames({
         completed: todo.completed,
-        editing: this.state.editing
+        editing: this.state.editing,
       })}>
         {element}
       </li>
@@ -64,7 +62,7 @@ TodoItem.propTypes = {
   todo: PropTypes.object.isRequired,
   editTodo: PropTypes.func.isRequired,
   deleteTodo: PropTypes.func.isRequired,
-  completeTodo: PropTypes.func.isRequired
+  completeTodo: PropTypes.func.isRequired,
 };
 
 export default TodoItem;
