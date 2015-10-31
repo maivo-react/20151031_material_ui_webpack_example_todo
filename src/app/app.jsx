@@ -1,4 +1,4 @@
-(function () {
+
   let React = require('react');
   let ReactDOM = require('react-dom');
   let injectTapEventPlugin = require('react-tap-event-plugin');
@@ -17,4 +17,4 @@
   // For more details see: https://facebook.github.io/react/docs/top-level-api.html#react.render
   ReactDOM.render(<Main />, document.getElementById('app'));
 
-})();
+
