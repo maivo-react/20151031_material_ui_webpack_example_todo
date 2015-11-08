@@ -29,6 +29,7 @@ function receivePlaylists(json) {
 
 export function fetchPlaylists() {
 	console.log("inside fetchPlaylists");
+	let url = "https://www.googleapis.com/youtube/v3/playlists?channelId=UCNCSdSsVvwaH5XT6CW3vSag&key=AIzaSyCC3f0niYMHqH9M_cYb6Hxhczdi82kljQ8&part=contentDetails%2Csnippet ";
   return dispatch => {
     dispatch(requestPlaylists());
 	//`http://www.reddit.com/r/${reddit}.json`
@@ -36,7 +37,8 @@ export function fetchPlaylists() {
 	//http://localhost:8080/mbmock/youtube/vuptvupt/channel_playlist_transformed.json
 	//"http://localhost:8080/mbmock/youtube/vuptvupt/channel_playlist_transformed_vuptvupt.json"
 	//`http://localhost:8080/mbmock/youtube/vuptvupt/channel_playlist_raw_${channel}.json`
-    return fetch(`http://localhost:8080/mbmock/youtube/vuptvupt/channel_playlist_raw_vupt.json`)
+	//`http://localhost:8080/mbmock/youtube/vuptvupt/channel_playlist_raw_vupt.json`
+    return fetch(url)
 		.then(response => {
 			return response.json();
 		})
